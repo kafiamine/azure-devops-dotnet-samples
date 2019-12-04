@@ -1,4 +1,11 @@
 pool:
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Abonnement Azure 1(de6e36d6-6cb5-42c3-8345-e32df005c526)'
+    appType: 'webApp'
+    appName: 'testaminemaha'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
   vmImage: vs2017-win2016
 
 variables:
